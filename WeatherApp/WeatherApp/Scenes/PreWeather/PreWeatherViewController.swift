@@ -19,12 +19,17 @@ class PreWeatherViewController: UIViewController {
     @IBAction func btnGetWeather(_ sender: Any) {
         (tfApiKey.text?.isEmpty ?? true)
             ?
-            presentAlert("Lütfen bir API Key giriniz")
+            presentAlert("Please type your API Key")
             :
             goWeatherResult()
     }
     
     private func goWeatherResult() {
+        guard let key = tfApiKey.text else {
+            return
+        }
+        API.apiKey = key
+        
         let sb = UIStoryboard(name: "Main", bundle: .main)
         guard let vc = sb.instantiateViewController(
                 withIdentifier: "WeatherResultViewController"
