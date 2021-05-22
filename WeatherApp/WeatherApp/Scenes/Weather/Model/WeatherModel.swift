@@ -50,37 +50,15 @@ struct Current: Codable {
 // MARK: - Weather
 struct Weather: Codable {
     let id: Int?
-    let main: Main?
-    let weatherDescription: Description?
-    let icon: Icon?
+    let main: String?
+    let weatherDescription: String?
+    let icon: String?
 
     enum CodingKeys: String, CodingKey {
         case id, main
         case weatherDescription = "description"
         case icon
     }
-}
-
-enum Icon: String, Codable {
-    case the01D = "01d"
-    case the01N = "01n"
-    case the02D = "02d"
-    case the02N = "02n"
-    case the03D = "03d"
-    case the03N = "03n"
-    case the04D = "04d"
-}
-
-enum Main: String, Codable {
-    case clear = "Clear"
-    case clouds = "Clouds"
-}
-
-enum Description: String, Codable {
-    case brokenClouds = "broken clouds"
-    case clearSky = "clear sky"
-    case fewClouds = "few clouds"
-    case scatteredClouds = "scattered clouds"
 }
 
 // MARK: - Daily
