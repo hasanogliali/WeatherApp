@@ -20,6 +20,10 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>Bu uygulama hava durumunu alabilmek için konumunuza ihtiyaç duyuyor.</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Bu uygulama hava durumunu alabilmek için konumunuza ihtiyaç duyuyor.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
